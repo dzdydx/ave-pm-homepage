@@ -1,91 +1,121 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG" />
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta
+      property="og:description"
+      content="SOCIAL MEDIA DESCRIPTION TAG TAG"
+    />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG" />
+    <meta
+      name="twitter:description"
+      content="TWITTER BANNER DESCRIPTION META TAG"
+    />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta
+      name="twitter:image"
+      content="static/images/your_twitter_banner_image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      AVE-PM: An Audio-visual Event Localization Dataset for Portrait Mode Short
+      Videos
+    </title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="static/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-</head>
-<body>
-
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                AVE-PM: An Audio-visual Event Localization Dataset for Portrait
+                Mode Short Videos
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  <a href="https://dzdydx.github.io/" target="_blank"
+                    >Wuyang Liu</a
+                  >,</span
+                >
+                <span class="author-block"> Yi Chai,</span>
+                <span class="author-block"> YongPeng Yan, </span>
+                <span class="author-block"> Yihuan Huang, </span>
+                <span class="author-block"> Yanzhen Ren </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"
+                  >School of Cyber Science and Engineering, Wuhan University<br />NeurIPS
+                  2025 Datasets and Benchmarks Track Submission</span
+                >
+                <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/pdf/2504.06884.pdf"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
                   </span>
-                  </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
+                  <!-- Supplementary PDF link -->
+                  <span class="link-block">
+                    <a
+                      href="static/pdfs/supplementary_material.pdf"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
@@ -95,40 +125,57 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <a
+                      href="https://github.com/dzdydx/ave-pm"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2504.06884"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="content has-text-justified">
+                <p>
+                  We present AVE-PM, the first dataset for audio-visual event
+                  localization in portrait mode short videos and present the
+                  challenge of the research on this emerging video format.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
+    <!-- Teaser video-->
+    <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -137,130 +184,342 @@
       </h2>
     </div>
   </div>
-</section>
-<!-- End teaser video -->
+</section> -->
+    <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+    <!-- Video carousel -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-video1" style="width: 448px">
+              <video
+                poster=""
+                id="video1"
+                autoplay
+                controls
+                muted
+                loop
+                height="100%"
+              >
+                <source src="static/videos/8196.mp4" type="video/mp4" />
+              </video>
+              <img src="static/images/balloons.png" alt="Video 1" />
+            </div>
+            <div class="item item-video2" style="width: 448px">
+              <video
+                poster=""
+                id="video2"
+                autoplay
+                controls
+                muted
+                loop
+                height="100%"
+              >
+                <source src="static/videos/10707.mp4" type="video/mp4" />
+              </video>
+              <img src="static/images/train.png" alt="Video 1" />
+            </div>
+            <div class="item item-video3" style="width: 448px">
+              <video
+                poster=""
+                id="video3"
+                autoplay
+                controls
+                muted
+                loop
+                height="100%"
+              >
+                <source src="static/videos/14679.mp4" type="video/mp4" />
+              </video>
+              <img src="static/images/cat.png" alt="Video 1" />
+            </div>
+            <div class="item item-video4" style="width: 448px">
+              <video
+                poster=""
+                id="video4"
+                autoplay
+                controls
+                muted
+                loop
+                height="100%"
+              >
+                <source src="static/videos/16212.mp4" type="video/mp4" />
+              </video>
+              <img src="static/images/auto_racing.png" alt="Video 1" />
+            </div>
+            <div class="item item-video5" style="width: 448px">
+              <video
+                poster=""
+                id="video5"
+                autoplay
+                controls
+                muted
+                loop
+                height="100%"
+              >
+                <source src="static/videos/26637.mp4" type="video/mp4" />
+              </video>
+              <img src="static/images/guitar.png" alt="Video 1" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
+    <!-- End video carousel -->
 
+    <!-- Paper abstract -->
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                While existing datasets for audio-visual event localization (AVEL) predominantly comprise landscape-oriented long videos with simple audio context, short videos have become the primary format of online video content due to the the proliferation of smartphones.
+              <br />
+              Short videos are characterized by portrait-oriented framing and layered audio compositions (e.g., overlapping sound effects, voiceovers, and music), which brings unique challenges unaddressed by conventional AVEL datasets.
+              <br />
+              To this end, we introduce AVE-PM, the first AVEL dataset specifically designed for portrait mode short videos, comprising 25,335 clips that span 86 fine-grained categories with frame-level annotations and sample-level labels indicating background music (BGM) presence. Our cross-mode evaluation reveals that state-of-the-art AVEL models suffer an average 18.66% performance drop during cross-mode evaluations.
+              <br />
+              Further analysis identifies two critical challenges: (1) Spatial bias in PM videos, where PM videos exhibit distinct object distribution patterns, with standard center cropping degrading performance on PM videos. (2) Audio complexity, as BGM interference in short videos compromises audio reliability. We explore audio signal processing strategies to remove the background musics in short videos. Results show that self NMF method boosts three AVEL models by up to +2.50% in accuracy.
+              <br />
+              Our work establishes a foundational benchmark and provides empirically validated strategies for advancing AVEL research in the mobile-centric video era.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
 
-<!-- Image carousel -->
-<section class="hero is-small">
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Cross-mode Evaluation</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/cross-mode-eval.png" alt="Cross-mode Evaluation" />
+              <p>
+                The cross-mode evaluation results show that state-of-the-art AVEL models suffer an average 18.66% performance drop during cross-mode evaluations, indicating that the performance of AVEL models is significantly affected by the mode of the input video.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Analysis of Spatial Bias</h2>
+            <div class="content has-text-justified">
+              <p>
+                What is the influence of spatial bias between portrait mode and landscape mode videos?
+              </p>
+              <img src="static/images/s-lm.png" alt="Cross-mode Evaluation" />
+              <img src="static/images/s-pm.png" alt="Cross-mode Evaluation" />
+              <p>
+                We measure the influence of spatial bias in the video domain by visualizing YOLOv5 bounding box distributions, which reveals that portrait mode videos exhibit more concentrated object information, primarily located in the central-lower portion of the frame, whereas landscape mode videos display objects that occupy a smaller proportion of the frame, being tightly focused around the very center.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Effect of video preprocessing</h2>
+            <div class="content has-text-justified">
+              <img src="static/images/video_preprocessing.png" alt="Cross-mode Evaluation" />
+              <p>
+                VGG-based methods achieve their best performance with Inception-style resizing (74.98% for AVELN and 77.62% for CMBS) or shorter-side resizing with random cropping (77.59% for CPSP), indicating that random operations enhance robustness to aspect ratio distortions. In contrast, the Vision Transformer-based LAVISH performs best with aspect ratio-preserving longer-side resizing (87.23%), outperforming its original square resizing (87.04%) and revealing ViTs' sensitivity to geometric integrity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 has-text-centered">Audio Processing</h2>
+            <p>We adopt three audio processing methods to remove the background music in short videos:</p>
+            <ol>
+              <li><b>Self NMF</b>. Extract BGM templates from non-event segments within the same video, then remove BGM via NMF decomposition.</li>
+              <li><b>Template NMF</b>. Utilize clean event templates from BGM-free samples to suppress BGM in contaminated audio via NMF decomposition.</li>
+              <li><b>Adpative LMS Filtering</b>. Apply Least Mean Squares (LMS) adaptive filters derived from template libraries to attenuate BGM components.</li>
+            </ol>
+            <div class="content has-text-justified">
+              <img src="static/images/remove bgm.png" alt="Cross-mode Evaluation" />
+              <p>
+                An illustration of the spectrum of the audio signal before and after removing the background music.
+              </p>
+              <img src="static/images/audio-preprocessing.png" alt="audio-preprocessing" />
+              <p>
+                The results demonstrate varying impacts of BGM removal techniques across different models. First, the effectiveness of preprocessing strategies differs significantly depending on the baseline method. For instance, Template NMF achieves the highest accuracy improvement for AVELN (75.43%, +4.14% over no removal) but slightly degrades CMBS performance (75.40%, -0.34%), while Adaptive Filtering benefits CPSP the most (75.61%, +2.20%) yet underperforms for CMBS (74.50%, -1.24%). Second, among the three preprocessing strategies, Self NMF is the only approach that consistently enhances performance across all models, improving AVELN (73.79%, +2.50%), CPSP (74.41%, +1.00%), and CMBS (77.36%, +1.62%).
+              </p>
+              <h3>BGM Removal Examples</h3>
+              <h5 style="margin-bottom: -5px;">Self NMF</h5>
+              <table>
+                <tr>
+                  <td>
+                    <span>Original Event</span>
+                  </td>
+                  <td>
+                    <span>BGM Template</span>
+                  </td>
+                  <td>
+                    <span>BGM Removed</span>
+                </tr>
+                <tr>
+                  <td>
+                    <audio src="static/audio/NMF1/original_event.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                  <td>
+                    <audio src="static/audio/NMF1/bgm_template.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                  <td>
+                    <audio src="static/audio/NMF1/processed_audio.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                </tr>
+              </table>
+              <h5 style="margin-bottom: -5px;">Template NMF</h5>
+              <table>
+                <tr>
+                  <td>
+                    <span>Original Event</span>
+                  </td>
+                  <td>
+                    <span>Target Event Template</span>
+                  </td>
+                  <td>
+                    <span>BGM Removed</span>
+                </tr>
+                <tr>
+                  <td>
+                    <audio src="static/audio/NMF2/original_event.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                  <td>
+                    <audio src="static/audio/NMF2/best_template.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                  <td>
+                    <audio src="static/audio/NMF2/extracted_event.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                </tr>
+              </table>
+              <h5 style="margin-bottom: -5px;">Adaptive LMS Filtering</h5>
+              <table>
+                <tr>
+                  <td>
+                    <span>Original Event</span>
+                  </td>
+                  <td>
+                    <span>BGM Template</span>
+                  </td>
+                  <td>
+                    <span>BGM Removed</span>
+                </tr>
+                <tr>
+                  <td>
+                    <audio src="static/audio/LMS/original_event.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                  <td>
+                    <audio src="static/audio/LMS/template.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                  <td>
+                    <audio src="static/audio/LMS/filtered_event.wav" controls controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" class="short-audio"></audio>
+                  </td>
+                </tr>
+              </table>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Conclusion</h2>
+            <div class="content has-text-justified">
+              <p>
+                In this paper, we introduce the Audio-visual Event in Portrait Mode (AVE-PM) dataset, the first dataset dedicated to audio-visual event localization in portrait mode short videos.
+                <br />
+                Through comprehensive experiments, we demonstrated that existing AVEL models struggle to generalize across video modes, revealing a significant domain gap. We also identify the key differences between landscape mode and portrait mode videos, such as spatial bias and audio complexity, highlighting the need for specialized approaches.
+                <br />
+                We make initial attempts to investigate optimal preprocessing techniques for both video and audio modalities.
+                <br />
+                We hope AVE-PM provides a foundation for future research, encouraging further research on portrait mode videos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image carousel -->
+    <!-- <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                First image description.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Second image description.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Third image description.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Fourth image description.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- End image carousel -->
+
+    <!-- Youtube video -->
+    <!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- End youtube video -->
+</section> -->
+    <!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
+    <!-- Paper poster -->
+    <!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,43 +529,54 @@
         
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </section> -->
+    <!--End paper poster -->
 
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
+    <!--BibTex citation -->
+    <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+</section> -->
+    <!--End BibTex citation -->
 
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a
+                  href="https://nerfies.github.io"
+                  target="_blank"
+                  >Nerfies</a
+                > project page. <br />
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
-
   </body>
-  </html>
+</html>

@@ -133,5 +133,15 @@ body {
   font-size: smaller;
 }
 
+/* 短音频播放器样式 */
+.short-audio {
+  width: 200px;
+}
+
+.short-audio::-webkit-media-controls-current-time-display,
+.short-audio::-webkit-media-controls-time-remaining-display {
+  display: none !important;
+}
+
 
 
