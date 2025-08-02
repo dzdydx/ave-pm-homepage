@@ -143,5 +143,59 @@ body {
   display: none !important;
 }
 
+/* Navigation bar improvements */
+.navbar {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-item {
+  transition: background-color 0.2s;
+}
+
+.navbar-item:hover {
+  background-color: #f5f5f5 !important;
+}
+
+/* Video carousel improvements */
+.results-carousel .item video {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.results-carousel .item video:hover {
+  transform: scale(1.02);
+}
+
+/* Button improvements */
+.button {
+  transition: all 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Section spacing */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+/* Hero section improvements */
+.hero.is-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Loading animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 

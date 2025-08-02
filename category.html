@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="AVE-PM Dataset Category Videos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Category Videos - AVE-PM Dataset</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" href="static/css/category.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/category.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <strong>AVE-PM Dataset</strong>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">
+            Home
+          </a>
+          <a class="navbar-item" href="gallery.html">
+            Video Gallery
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="breadcrumbs" style="padding: 1rem 1.5rem;">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Video Gallery</a></li>
+        <li class="is-active"><a href="#" aria-current="page" id="breadcrumbCategory">Category</a></li>
+      </ul>
+    </nav>
+
+    <!-- Category Header -->
+    <section class="hero is-primary is-medium">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-2" id="categoryTitle">Loading...</h1>
+          <p class="subtitle is-4" id="categorySubtitle">Class ID: <span id="categoryId">-</span></p>
+          <p class="subtitle is-6" id="videoCount">Loading videos...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Carousel -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <div id="category-carousel" class="carousel results-carousel">
+            <!-- Videos will be loaded here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Grid (Alternative view) -->
+    <section class="section" style="display: none;" id="gridView">
+      <div class="container">
+        <div class="columns is-multiline" id="videoGrid">
+          <!-- Grid view will be populated here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section class="section">
+      <div class="container has-text-centered">
+        <div class="buttons is-centered">
+          <button class="button is-info" onclick="toggleView()">
+            <span class="icon">
+              <i class="fas fa-th" id="viewToggleIcon"></i>
+            </span>
+            <span id="viewToggleText">Grid View</span>
+          </button>
+          <a class="button is-light" href="gallery.html">
+            <span class="icon">
+              <i class="fas fa-arrow-left"></i>
+            </span>
+            <span>Back to Gallery</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="section has-text-centered">
+      <div class="spinner"></div>
+      <p>Loading videos...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div id="errorMessage" class="section has-text-centered" style="display: none;">
+      <div class="notification is-danger">
+        <p>Failed to load videos for this category.</p>
+        <a href="gallery.html" class="button is-light">Back to Gallery</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>
+                which was adopted from the <a href="https://nerfies.github.io">Nerfies</a> project page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

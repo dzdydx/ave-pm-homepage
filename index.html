@@ -61,8 +61,57 @@
     <script src="static/js/bulma-carousel.min.js"></script>
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
+    <script>
+      // Carousel control logic - stop all videos when carousel changes
+      document.addEventListener('DOMContentLoaded', function() {
+        // Function to pause all videos
+        function pauseAllVideos() {
+          const videos = document.querySelectorAll('video');
+          videos.forEach(video => {
+            video.pause();
+          });
+        }
+        
+        // Initialize carousel and add event listeners
+        const carousel = document.getElementById('results-carousel');
+        if (carousel) {
+          // Listen for carousel slide changes
+          carousel.addEventListener('slide.bs.carousel', pauseAllVideos);
+          carousel.addEventListener('slid.bs.carousel', pauseAllVideos);
+          
+          // For bulma-carousel events
+          carousel.addEventListener('before:show', pauseAllVideos);
+          carousel.addEventListener('after:show', pauseAllVideos);
+          
+          // Also listen for navigation clicks
+          const navButtons = carousel.querySelectorAll('.carousel-nav-left, .carousel-nav-right, .carousel-pagination button');
+          navButtons.forEach(button => {
+            button.addEventListener('click', pauseAllVideos);
+          });
+        }
+      });
+    </script>
   </head>
   <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <strong>AVE-PM Dataset</strong>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">
+            Home
+          </a>
+          <a class="navbar-item" href="gallery.html">
+            Video Gallery
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <section class="hero">
       <div class="hero-body">
         <div class="container is-max-desktop">
@@ -196,7 +245,6 @@
               <video
                 poster=""
                 id="video1"
-                autoplay
                 controls
                 muted
                 loop
@@ -210,7 +258,6 @@
               <video
                 poster=""
                 id="video2"
-                autoplay
                 controls
                 muted
                 loop
@@ -224,7 +271,6 @@
               <video
                 poster=""
                 id="video3"
-                autoplay
                 controls
                 muted
                 loop
@@ -238,7 +284,6 @@
               <video
                 poster=""
                 id="video4"
-                autoplay
                 controls
                 muted
                 loop
@@ -252,7 +297,6 @@
               <video
                 poster=""
                 id="video5"
-                autoplay
                 controls
                 muted
                 loop
