@@ -61,36 +61,6 @@
     <script src="static/js/bulma-carousel.min.js"></script>
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
-    <script>
-      // Carousel control logic - stop all videos when carousel changes
-      document.addEventListener('DOMContentLoaded', function() {
-        // Function to pause all videos
-        function pauseAllVideos() {
-          const videos = document.querySelectorAll('video');
-          videos.forEach(video => {
-            video.pause();
-          });
-        }
-        
-        // Initialize carousel and add event listeners
-        const carousel = document.getElementById('results-carousel');
-        if (carousel) {
-          // Listen for carousel slide changes
-          carousel.addEventListener('slide.bs.carousel', pauseAllVideos);
-          carousel.addEventListener('slid.bs.carousel', pauseAllVideos);
-          
-          // For bulma-carousel events
-          carousel.addEventListener('before:show', pauseAllVideos);
-          carousel.addEventListener('after:show', pauseAllVideos);
-          
-          // Also listen for navigation clicks
-          const navButtons = carousel.querySelectorAll('.carousel-nav-left, .carousel-nav-right, .carousel-pagination button');
-          navButtons.forEach(button => {
-            button.addEventListener('click', pauseAllVideos);
-          });
-        }
-      });
-    </script>
   </head>
   <body>
     <!-- Navigation Bar -->

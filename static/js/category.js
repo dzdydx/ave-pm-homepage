@@ -94,40 +94,6 @@ function findAvailableVideos() {
     return availableVideos;
 }
 
-// Check if a video file exists
-function checkVideoExists(videoPath) {
-    return new Promise((resolve) => {
-        const video = document.createElement('video');
-        video.preload = 'metadata';
-        
-        const timeout = setTimeout(() => {
-            resolve(false);
-        }, 5000); // 5 second timeout
-        
-        video.onloadedmetadata = () => {
-            clearTimeout(timeout);
-            resolve(true);
-        };
-        
-        video.onerror = () => {
-            clearTimeout(timeout);
-            resolve(false);
-        };
-        
-        video.onabort = () => {
-            clearTimeout(timeout);
-            resolve(false);
-        };
-        
-        try {
-            video.src = videoPath;
-        } catch (error) {
-            clearTimeout(timeout);
-            resolve(false);
-        }
-    });
-}
-
 // Render videos in carousel format
 function renderCarousel() {
     const carousel = document.getElementById('category-carousel');
@@ -254,79 +220,9 @@ function showError(message) {
     document.getElementById('errorMessage').querySelector('.notification p').textContent = message;
 }
 
-// Function to pause all videos
-function pauseAllVideos() {
-    const videos = document.querySelectorAll('video');
-    videos.forEach(video => {
-        video.pause();
-    });
-}
-
-// Setup carousel control logic - stop all videos when carousel changes
-function setupCarouselVideoControl() {
-    // Add event listener for when carousel is created/recreated
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            mutation.addedNodes.forEach(function(node) {
-                if (node.nodeType === 1 && node.classList && node.classList.contains('carousel')) {
-                    attachCarouselEvents(node);
-                }
-            });
-        });
-    });
-    
-    // Start observing the container for carousel additions
-    const container = document.getElementById('videos-container');
-    if (container) {
-        observer.observe(container, { childList: true, subtree: true });
-        
-        // Also attach to any existing carousels
-        const existingCarousels = container.querySelectorAll('.carousel');
-        existingCarousels.forEach(attachCarouselEvents);
-    }
-}
-
-// Attach carousel events to pause videos on slide change
-function attachCarouselEvents(carousel) {
-    // Listen for various carousel events
-    carousel.addEventListener('slide.bs.carousel', pauseAllVideos);
-    carousel.addEventListener('slid.bs.carousel', pauseAllVideos);
-    
-    // For bulma-carousel events
-    carousel.addEventListener('before:show', pauseAllVideos);
-    carousel.addEventListener('after:show', pauseAllVideos);
-    
-    // Also listen for navigation clicks
-    const navButtons = carousel.querySelectorAll('.carousel-nav-left, .carousel-nav-right, .carousel-pagination button');
-    navButtons.forEach(button => {
-        button.addEventListener('click', pauseAllVideos);
-    });
-    
-    // Listen for touch/swipe events that might trigger carousel change
-    let startX = null;
-    carousel.addEventListener('touchstart', function(e) {
-        startX = e.touches[0].clientX;
-    });
-    
-    carousel.addEventListener('touchend', function(e) {
-        if (startX !== null) {
-            const endX = e.changedTouches[0].clientX;
-            const diff = Math.abs(startX - endX);
-            // If significant swipe detected, pause videos
-            if (diff > 50) {
-                setTimeout(pauseAllVideos, 100); // Small delay to ensure carousel has changed
-            }
-            startX = null;
-        }
-    });
-}
-
 // Initialize page when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     if (getCategoryFromURL()) {
         loadCategoryVideos();
     }
-    
-    // Setup carousel video control
-    setupCarouselVideoControl();
 });

@@ -2,6 +2,8 @@
 
 This repository contains the code and dataset for our NeurIPS 2025 submission on audio-visual event localization in portrait mode short videos.
 
+🎉 **Update:** We've added a gallery page for reviewers to easily browse sample data! Please note, this page is only for paper review purposes and will be removed before official release to ensure compliance and protect privacy. 🛡️
+
 ## Overview
 
 AVE-PM is the first dataset specifically designed for audio-visual event localization in portrait mode short videos. It contains 25,335 clips spanning 86 fine-grained categories with frame-level annotations and sample-level labels indicating background music (BGM) presence.
