@@ -19,9 +19,9 @@ async function loadCategories() {
         
         categories = lines.slice(1).map(line => {
             const values = line.split(',');
-            const classId = parseInt(values[1]);
+            const classId = parseInt(values[0]);
             return {
-                class_name: values[0],
+                class_name: values[1],
                 class_id: classId,
                 video_count: galleryVideos[classId] ? galleryVideos[classId].length : 0
             };
