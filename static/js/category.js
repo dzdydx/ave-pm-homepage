@@ -58,7 +58,6 @@ async function loadCategoryVideos() {
 // Update category information in the UI
 function updateCategoryInfo() {
     document.getElementById('categoryTitle').textContent = currentCategoryName;
-    document.getElementById('categoryId').textContent = currentCategoryId;
     document.getElementById('breadcrumbCategory').textContent = currentCategoryName;
     document.title = `${currentCategoryName} - AVE-PM Dataset`;
 }

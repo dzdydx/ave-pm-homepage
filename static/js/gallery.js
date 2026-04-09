@@ -59,7 +59,6 @@ function renderCategories(categoriesToRender) {
                 <div class="category-card">
                     <div class="category-content">
                         <div class="category-title">${categoryName}</div>
-                        <div class="category-id">Class ID: ${classId}</div>
                         <div class="video-count">${category.video_count} videos available</div>
                         <button class="button is-primary view-category-btn" onclick="viewCategory(${classId}, '${categoryName}')">
                             <span class="icon">
