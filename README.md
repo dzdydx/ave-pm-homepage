@@ -1,6 +1,6 @@
 # AVE-PM: An Audio-visual Event Localization Dataset for Portrait Mode Short Videos
 
-This repository contains the code and dataset for our NeurIPS 2025 submission on audio-visual event localization in portrait mode short videos.
+This repository contains the code and dataset for our ACM MM 26 submission on audio-visual event localization in portrait mode short videos.
 
 🎉 **Update:** We've added a gallery page for reviewers to easily browse sample data! Please note, this page is only for paper review purposes and will be removed before official release to ensure compliance and protect privacy. 🛡️
 
